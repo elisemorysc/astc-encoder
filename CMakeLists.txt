@@ -3,8 +3,8 @@ project(astcenc)
 
 set(TARGET astcenc)
 
-set(SRCDIR "${CMAKE_CURRENT_SOURCE_DIR}/../Source")
-set(HDRDIR "${CMAKE_CURRENT_SOURCE_DIR}/../include")
+set(SRCDIR "${CMAKE_CURRENT_SOURCE_DIR}/Source")
+set(HDRDIR "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
 set(SOURCES
     ${SRCDIR}/astc_averages_and_directions.cpp
