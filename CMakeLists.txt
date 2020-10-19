@@ -46,7 +46,7 @@ set(ASTC_ENCODER_SRC_LIST
   ${CMAKE_CURRENT_SOURCE_DIR}/Source/astc_weight_align.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Source/astc_weight_quant_xfer_tables.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Source/astc_compute_variance.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/Source/astc_toplevel.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/Source/astc_extras.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Source/mathlib.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Source/softfloat.cpp
 )
@@ -60,7 +60,7 @@ set(ASTC_ENCODER_PRIVATE_HDR_LIST
 add_library(astcenc ${ASTC_ENCODER_SRC_LIST} ${ASTC_ENCODER_PRIVATE_HDR_LIST})
 set(TARGETS astcenc)
 
-target_link_libraries(astcenc PRIVATE stb::stb)
+target_link_libraries(astcenc PUBLIC stb::stb)
 
 set(GENERATED_DIR "${CMAKE_CURRENT_BINARY_DIR}/generated")
 set(VERSION_CONFIG "${GENERATED_DIR}/${PROJECT_NAME}ConfigVersion.cmake")
