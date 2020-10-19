@@ -8,6 +8,9 @@ HunterGate(
 
 project(astc-encoder VERSION 1.3.1)
 
+hunter_add_package(stb)
+find_package(stb CONFIG REQUIRED)
+
 # Introduce variables:
 # * CMAKE_INSTALL_LIBDIR
 # * CMAKE_INSTALL_BINDIR
@@ -56,6 +59,8 @@ set(ASTC_ENCODER_PRIVATE_HDR_LIST
 
 add_library(astcenc ${ASTC_ENCODER_SRC_LIST} ${ASTC_ENCODER_PRIVATE_HDR_LIST})
 set(TARGETS astcenc)
+
+target_link_libraries(astcenc PRIVATE stb::stb)
 
 set(GENERATED_DIR "${CMAKE_CURRENT_BINARY_DIR}/generated")
 set(VERSION_CONFIG "${GENERATED_DIR}/${PROJECT_NAME}ConfigVersion.cmake")
