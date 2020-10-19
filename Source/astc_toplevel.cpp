@@ -749,7 +749,7 @@ void dump_image(astc_codec_image * img)
 }
 
 
-int main(int argc, char **argv)
+int top_level_main(int argc, char **argv)
 {
 	int i;
 

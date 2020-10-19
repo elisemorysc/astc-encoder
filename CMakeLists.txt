@@ -46,10 +46,9 @@ set(ASTC_ENCODER_SRC_LIST
   ${CMAKE_CURRENT_SOURCE_DIR}/Source/astc_weight_align.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Source/astc_weight_quant_xfer_tables.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Source/astc_compute_variance.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/Source/astc_extras.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/Source/astc_toplevel.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Source/mathlib.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Source/softfloat.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/Source/stb_image.c
 )
 
 set(ASTC_ENCODER_PRIVATE_HDR_LIST
