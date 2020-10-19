@@ -6,7 +6,7 @@ HunterGate(
     SHA1 "0952a54dc983ecbea09dfe8c53ee65d1e0e91232"
 )
 
-project(astc-encoder VERSION 2.0)
+project(astc-encoder VERSION 1.3.1)
 
 # Introduce variables:
 # * CMAKE_INSTALL_LIBDIR
@@ -56,11 +56,6 @@ set(ASTC_ENCODER_PRIVATE_HDR_LIST
 
 add_library(astcenc ${ASTC_ENCODER_SRC_LIST} ${ASTC_ENCODER_PRIVATE_HDR_LIST})
 set(TARGETS astcenc)
-
-target_include_directories(astcenc INTERFACE
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/Source>
-  $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}>
-)
 
 set(GENERATED_DIR "${CMAKE_CURRENT_BINARY_DIR}/generated")
 set(VERSION_CONFIG "${GENERATED_DIR}/${PROJECT_NAME}ConfigVersion.cmake")
